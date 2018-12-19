@@ -1,0 +1,37 @@
+<html>
+	<head>
+		<style>
+			* { box-sizing: border-box; }
+			body { color: red; }
+		</style>
+	</head>
+	<body>
+		<script>
+			function addElement()
+			{
+				const newElement = document.createElement("div")
+				newElement.className = "exago-app"
+				document.body.appendChild(newElement)
+				const shadow = newElement.attachShadow({mode: "open"})
+				
+				// const style = document.createElement("style")
+				// style.textContent = `
+				// 	div { height: 100px; width: 100px; background: green; color: white; padding: 50px; }
+				// `;
+				// shadow.appendChild(style)
+
+				const link = document.createElement("link")
+				link.rel="stylesheet"
+				link.href = "style.css"
+				shadow.appendChild(link)
+
+				const box = document.createElement("div")
+				box.textContent = "this text should be white"
+				shadow.appendChild(box)
+			}
+			addElement()
+			addElement()
+			addElement()
+		</script>
+	</body>
+</html>

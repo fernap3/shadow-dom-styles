@@ -1,0 +1,11 @@
+:host {
+	display: inline-block;
+	margin-right: 10px;
+}
+div {
+	height: 100px;
+	width: 100px;
+	background: green;
+	color: white;
+	padding: 50px;
+}
